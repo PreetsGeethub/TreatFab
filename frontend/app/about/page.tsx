@@ -71,7 +71,7 @@ export default function AboutPage() {
     initial: { opacity: 0, y: reduceMotion ? 0 : 30 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.2 },
-    transition: { duration: 0.7, ease: "easeOut" },
+    transition: { duration: 0.7, ease: "easeOut" as const },
   };
 
   return (
@@ -137,7 +137,7 @@ export default function AboutPage() {
               transition={{
                 duration: 0.7,
                 delay: 0.15,
-                ease: "easeOut",
+                ease: "easeOut" as const,
               }}
               className="mt-12 flex flex-wrap items-center gap-5"
             >
@@ -299,7 +299,7 @@ export default function AboutPage() {
             transition={{
               duration: 0.7,
               delay: 0.1,
-              ease: "easeOut",
+              ease: "easeOut" as const,
             }}
             className="mt-20 grid gap-4 md:grid-cols-2 lg:grid-cols-4"
           >
@@ -411,7 +411,7 @@ export default function AboutPage() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{
         duration: 1.2,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       }}
       style={{ transformOrigin: "top" }}
       className="pointer-events-none absolute left-[28px] top-8 bottom-8 hidden w-px bg-[#E8B830] md:block"
@@ -437,7 +437,7 @@ export default function AboutPage() {
         transition={{
           duration: 0.7,
           delay: index * 0.1,
-          ease: "easeOut",
+          ease: "easeOut" as const,
         }}
         className="group relative mb-4 last:mb-0"
       >
@@ -500,7 +500,7 @@ export default function AboutPage() {
                 transition={{
                   duration: 12,
                   repeat: Infinity,
-                  ease: "linear",
+                  ease: "linear" as const,
                 }}
                 className="absolute inset-0 rounded-full border border-dashed border-[#0B3D24]/15 group-hover:border-[#E8B830]/40"
               />
@@ -618,7 +618,7 @@ export default function AboutPage() {
                   transition={{
                     duration: 0.7,
                     delay: index * 0.06,
-                    ease: "easeOut",
+                    ease: "easeOut" as const,
                   }}
                   className="group min-h-[330px] bg-[#f5f3ec] p-8 transition-colors duration-300 hover:bg-[#0B3D24] hover:text-white md:p-9"
                 >

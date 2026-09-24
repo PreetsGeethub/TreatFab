@@ -44,7 +44,7 @@ export default function NotFound() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
           }}
           className="absolute -left-[15%] -top-[15%] h-[650px] w-[650px] rounded-full bg-[#2D7048] blur-[120px]"
         />
@@ -58,7 +58,7 @@ export default function NotFound() {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "easeInOut" as const,
           }}
           className="absolute -bottom-[20%] -right-[10%] h-[550px] w-[550px] rounded-full bg-[#C6972F] blur-[130px]"
         />
@@ -158,7 +158,7 @@ export default function NotFound() {
             transition={{
               duration: 8,
               repeat: Infinity,
-              ease: "linear",
+              ease: "linear" as const,
             }}
           />
 
@@ -175,7 +175,7 @@ export default function NotFound() {
             transition={{
               duration: 10,
               repeat: Infinity,
-              ease: "linear",
+              ease: "linear" as const,
             }}
           />
         </svg>
@@ -197,7 +197,7 @@ export default function NotFound() {
               duration: 4 + index * 0.35,
               delay: node.delay,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: "easeInOut" as const,
             }}
           >
             <div
@@ -374,7 +374,7 @@ export default function NotFound() {
               transition={{
                 duration: 35,
                 repeat: Infinity,
-                ease: "linear",
+                ease: "linear" as const,
               }}
               className="absolute inset-[5%] rounded-full border border-white/[0.08] border-dashed"
             />
@@ -384,7 +384,7 @@ export default function NotFound() {
               transition={{
                 duration: 50,
                 repeat: Infinity,
-                ease: "linear",
+                ease: "linear" as const,
               }}
               className="absolute inset-[18%] rounded-full border border-[#C6972F]/20"
             />
@@ -398,7 +398,7 @@ export default function NotFound() {
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-                  ease: "easeInOut",
+                  ease: "easeInOut" as const,
                 }}
                 className="relative flex h-[190px] w-[190px] items-center justify-center rounded-full border border-[#C6972F]/30 md:h-[240px] md:w-[240px]"
               >
@@ -408,7 +408,7 @@ export default function NotFound() {
                   transition={{
                     duration: 12,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: "linear" as const,
                   }}
                   className="absolute inset-[-25px] rounded-full border border-white/[0.08]"
                 >
@@ -426,7 +426,7 @@ export default function NotFound() {
                   transition={{
                     duration: 20,
                     repeat: Infinity,
-                    ease: "linear",
+                    ease: "linear" as const,
                   }}
                   className="flex h-24 w-24 rotate-45 items-center justify-center border border-[#C6972F]/50"
                 >
@@ -452,7 +452,7 @@ export default function NotFound() {
               transition={{
                 duration: 4,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: "easeInOut" as const,
               }}
               className="absolute left-[5%] top-[25%] border border-white/10 bg-[#0B3D24]/70 px-4 py-3 backdrop-blur-md"
             >
@@ -470,7 +470,7 @@ export default function NotFound() {
               transition={{
                 duration: 5,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: "easeInOut" as const,
               }}
               className="absolute bottom-[20%] right-[2%] border border-[#C6972F]/20 bg-[#0B3D24]/70 px-4 py-3 backdrop-blur-md"
             >

@@ -131,7 +131,7 @@ export default function WhyTreatfabProcess() {
       y: 0,
       transition: {
         duration: reduceMotion ? 0 : 0.65,
-        ease: "easeOut",
+        ease: "easeOut" as const,
       },
     },
   };
@@ -143,7 +143,7 @@ export default function WhyTreatfabProcess() {
       y: 0,
       transition: {
         duration: reduceMotion ? 0 : 0.5,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         delay: reduceMotion ? 0 : i * 0.035,
       },
     }),

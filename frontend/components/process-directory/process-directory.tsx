@@ -433,7 +433,7 @@ export default function ProcessDirectory() {
                   animate={{ width: "100%" }}
                   transition={{
                     duration: SLIDE_DURATION_MS / 1000,
-                    ease: "linear",
+                    ease: "linear" as const,
                   }}
                 />
               )}

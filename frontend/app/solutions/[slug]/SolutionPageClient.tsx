@@ -176,7 +176,7 @@ export default function SolutionPageClient({
             </motion.div>
 
             <div className="grid border-t border-white/10 sm:grid-cols-2">
-              {solution.applications.map((item, index) => (
+            {solution.applications.map((item: string, index: number) => (
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, y: 20 }}
@@ -231,7 +231,7 @@ export default function SolutionPageClient({
           </motion.div>
 
           <div className="mt-16 grid border-t border-[#0B3D24]/10 md:grid-cols-2">
-            {solution.benefits.map((benefit, index) => (
+            {solution.benefits.map((benefit: string, index: number) => (
               <motion.div
                 key={benefit}
                 initial={{ opacity: 0, y: 25 }}
@@ -289,7 +289,7 @@ export default function SolutionPageClient({
             </motion.div>
 
             <div className="grid grid-cols-2 border-t border-[#0B3D24]/15">
-              {solution.chemistry.map((item, index) => (
+              {solution.chemistry.map((item: string, index: number) => (
                 <motion.div
                   key={item}
                   initial={{ opacity: 0, scale: 0.96 }}

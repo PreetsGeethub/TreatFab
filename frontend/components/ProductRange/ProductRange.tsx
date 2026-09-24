@@ -214,7 +214,10 @@ export default function ProductRange() {
     show: {
       opacity: 1,
       y: 0,
-      transition: { duration: reduceMotion ? 0 : 0.7, ease: "easeOut" },
+      transition: {
+        duration: reduceMotion ? 0 : 0.7,
+        ease: "easeOut" as const,
+      },
     },
   };
 
@@ -301,7 +304,11 @@ export default function ProductRange() {
                 transition={
                   reduceMotion
                     ? undefined
-                    : { duration: 5.5, repeat: Infinity, ease: "linear" }
+                    : {
+                      duration: 5.5,
+                      repeat: Infinity,
+                      ease: "linear" as const,
+                    }
                 }
               />
             </svg>
@@ -318,7 +325,7 @@ export default function ProductRange() {
                 transition={{
                   duration: reduceMotion ? 0 : 0.65,
                   delay: reduceMotion ? 0 : index * 0.08,
-                  ease: "easeOut",
+                  ease: "easeOut" as const,
                 }}
                 className="group relative"
               >
@@ -459,7 +466,7 @@ export default function ProductRange() {
               viewport={{ once: true, amount: 0.1 }}
               transition={{
                 duration: reduceMotion ? 0 : 1.8,
-                ease: "easeInOut",
+                ease: "easeInOut" as const,
               }}
             />
 
@@ -473,7 +480,7 @@ export default function ProductRange() {
                   transition={{
                     duration: reduceMotion ? 0 : 0.55,
                     delay: reduceMotion ? 0 : index * 0.04,
-                    ease: "easeOut",
+                    ease: "easeOut" as const,
                   }}
                   className="relative pl-9"
                 >
