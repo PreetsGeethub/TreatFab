@@ -241,8 +241,8 @@ export default function ProcessDirectory() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.012 }}
                     transition={{
-                      opacity: { duration: reduceMotion ? 0 : 0.65, ease: [0.22, 1, 0.36, 1] },
-                      scale: { duration: reduceMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] },
+                      opacity: { duration: reduceMotion ? 0 : 0.65, ease: [0.22, 1, 0.36, 1] as const, },
+                      scale: { duration: reduceMotion ? 0 : 0.9, ease: [0.22, 1, 0.36, 1] as const,},
                     }}
                   >
                     <Image
@@ -261,7 +261,7 @@ export default function ProcessDirectory() {
                     initial={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
-                    transition={{ duration: reduceMotion ? 0 : 0.65, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: reduceMotion ? 0 : 0.65, ease: [0.22, 1, 0.36, 1] as const,}}
                     style={{ backgroundColor: "#8A8172" }}
                   />
                 )}
