@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  /* Treatfab brand tokens. These replace the generic black/white
+     create-next-app defaults. Values match the constants currently
+     inlined at the top of Navbar.tsx (FOREST / GOLD / WARM_WHITE) —
+     once you're happy with the palette, move Navbar.tsx over to
+     reading these instead of its own local hex constants, so there's
+     one source of truth. */
+  --color-forest: #14251c;
+  --color-navy: #101b2d;
+  --color-gold: #c6972f;
+  --color-warm-white: #faf7f0;
+
+  --background: var(--color-warm-white);
+  --foreground: var(--color-forest);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Intentionally no @media (prefers-color-scheme: dark) override.
+   Treatfab's palette is fixed brand identity, not a light/dark toggle —
+   a textile-manufacturer visitor's OS theme preference shouldn't change
+   the brand's colors. If a dark mode is ever wanted, it should be a
+   deliberate design decision with its own token set, not the
+   create-next-app default. */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Hero image reveal — the single, one-time load animation permitted by
+   the approved brief. Nothing else on the site should animate on page
+   load; scroll-triggered or repeated effects are intentionally not
+   used here. */
+@keyframes heroReveal {
+  from {
+    transform: scale(1.04);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hero-reveal {
+  animation: heroReveal 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-reveal {
+    animation: none;
+  }
+}
