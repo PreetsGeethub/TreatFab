@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import type { CSSProperties } from "react";
-
+import Link from "next/link";
 const FOREST = "#14251C";
 const FOREST_DEEP = "#0D2017";
 const GOLD = "#C6972F";
@@ -605,17 +605,17 @@ export default function ProductRange() {
             treatment to the final garment finish.
           </p>
 
-          <a
-            href="#contact"
-            className="group inline-flex w-fit items-center gap-3 text-[.72rem] font-semibold uppercase tracking-[.15em]"
-            style={{ color: FOREST }}
-          >
-            <span
-              className="h-px w-7 transition-all duration-300 group-hover:w-12"
-              style={{ background: GOLD }}
-            />
-            Talk to our team
-          </a>
+          <Link
+  href="/contact"
+  className="group inline-flex w-fit items-center gap-3 text-[.72rem] font-semibold uppercase tracking-[.15em]"
+  style={{ color: FOREST }}
+>
+  <span
+    className="h-px w-7 transition-all duration-300 group-hover:w-12"
+    style={{ background: GOLD }}
+  />
+  Talk to our team
+</Link>
         </motion.div>
       </div>
     </section>

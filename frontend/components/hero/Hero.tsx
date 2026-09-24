@@ -261,7 +261,7 @@ export default function Hero() {
         {/* =====================================================
             ACTIONS
            ===================================================== */}
-        <div className="mt-7 flex items-center gap-6">
+       <div className="relative z-20 mt-7 flex items-center gap-6">
           {/* Get a Quote */}
           <a
             href="/contact"
@@ -328,16 +328,16 @@ export default function Hero() {
       {/* =========================================================
           SMALL EDITORIAL PHRASE
          ========================================================= */}
-      <div
-        className="
-          absolute
-          bottom-[7%]
-          left-[6.5%]
-          z-10
-          hidden
-          md:block
-        "
-      >
+    <div
+  className="
+    absolute
+    bottom-[3%]
+    left-[6.5%]
+    z-10
+    hidden
+    pointer-events-none
+    md:block
+  ">
         <p
           className="text-[1.45rem] leading-[1.05]"
           style={{
