@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const HERO_IMAGE_SRC = "/images/treatfab-demo.jpeg";
+const HERO_IMAGE_SRC = "/images/treatfab-demo.webp";
 
 const FOREST = "#14251C";
 const GOLD = "#C6972F";
@@ -92,21 +92,21 @@ const VALUES = [
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[680px] w-full overflow-hidden">
+    <section className="relative h-screen min-h-[680px] w-full overflow-hidden md:h-screen md:min-h-[680px]">
       {/* =========================================================
           HERO IMAGE
          ========================================================= */}
       <Image
-        src={HERO_IMAGE_SRC}
-        alt="Family enjoying soft, comfortable fabrics"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-        style={{
-          objectPosition: "center 42%",
-        }}
-      />
+  src={HERO_IMAGE_SRC}
+  alt="Family enjoying soft, comfortable fabrics"
+  fill
+  priority
+  sizes="100vw"
+  className="object-cover"
+  style={{
+    objectPosition: "center 42%",
+  }}
+/>
 
       {/* =========================================================
           LEFT-SIDE CONTRAST
@@ -264,7 +264,7 @@ export default function Hero() {
         <div className="mt-7 flex items-center gap-6">
           {/* Get a Quote */}
           <a
-            href="/enquiry"
+            href="/contact"
             className="
               border
               px-6

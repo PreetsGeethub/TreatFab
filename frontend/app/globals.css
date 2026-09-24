@@ -60,3 +60,9 @@ body {
     animation: none;
   }
 }
+
+@media (max-width: 767px) {
+  .hero-image {
+    object-position: center center !important;
+  }
+}
