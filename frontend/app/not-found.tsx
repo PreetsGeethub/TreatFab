@@ -234,7 +234,7 @@ export default function NotFound() {
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 duration: 0.7,
-                ease: [0.22, 1, 0.36, 1],
+                ease: [0.22, 1, 0.36, 1] as const,
               }}
               className="mb-8 flex items-center gap-3"
             >
@@ -264,7 +264,7 @@ export default function NotFound() {
                 transition={{
                   duration: 1,
                   delay: 0.15,
-                  ease: [0.22, 1, 0.36, 1],
+                  ease: [0.22, 1, 0.36, 1] as const,
                 }}
                 className="select-none text-[clamp(8rem,22vw,20rem)] font-semibold leading-[0.7] tracking-[-0.09em]"
               >
@@ -278,7 +278,7 @@ export default function NotFound() {
                 transition={{
                   duration: 1.2,
                   delay: 0.8,
-                  ease: [0.22, 1, 0.36, 1],
+                  ease: [0.22, 1, 0.36, 1] as const,
                 }}
                 className="mt-8 h-[2px]"
                 style={{ backgroundColor: GOLD }}
@@ -364,7 +364,7 @@ export default function NotFound() {
             transition={{
               duration: 1.1,
               delay: 0.35,
-              ease: [0.22, 1, 0.36, 1],
+              ease: [0.22, 1, 0.36, 1] as const,
             }}
             className="relative mx-auto aspect-square w-full max-w-[560px]"
           >

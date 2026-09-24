@@ -153,7 +153,7 @@ const fadeUp = {
     y: 0,
     transition: {
       duration: 0.75,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -407,7 +407,7 @@ function SolutionStage({
       transition={{
         duration: 0.8,
         delay: 0.05,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       }}
       className="group"
     >
@@ -424,7 +424,7 @@ function SolutionStage({
             viewport={{ once: true }}
             transition={{
               duration: 1.2,
-              ease: [0.22, 1, 0.36, 1],
+              ease: [0.22, 1, 0.36, 1] as const,
             }}
             className="absolute inset-0"
           >

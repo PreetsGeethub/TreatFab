@@ -154,7 +154,7 @@ export default function EthicalChemistry() {
       y: 0,
       transition: {
         duration: reduceMotion ? 0 : 0.8,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
@@ -167,7 +167,7 @@ export default function EthicalChemistry() {
       transition: {
         duration: reduceMotion ? 0 : 0.65,
         delay: reduceMotion ? 0 : index * 0.09,
-        ease: [0.22, 1, 0.36, 1],
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     }),
   };
