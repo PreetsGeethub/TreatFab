@@ -188,74 +188,72 @@ export default function AboutPage() {
           </motion.div>
 
           <motion.div {...reveal} className="max-w-4xl">
-            <h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#0B1F3A] md:text-6xl">
-              Built around the process,
-              <span className="text-[#0B3D24]"> not just the product.</span>
-            </h2>
+          <h2 className="text-4xl font-semibold leading-[1.02] tracking-[-0.04em] text-[#0B1F3A] md:text-6xl">
+  Built around the process,
+  <span className="text-[#0B3D24]"> not just the product.</span>
+</h2>
 
-            <div className="mt-10 space-y-6 text-lg leading-8 text-[#0B1F3A]/65">
-              <p>
-                Treatfab Chemicals Pvt. Ltd. is a textile chemical company
-                built around two complementary business verticals.
-              </p>
+<div className="mt-10 space-y-6 text-lg leading-8 text-[#0B1F3A]/65">
+  <p>
+    Treatfab Chemicals Pvt. Ltd. is a textile chemical company built around
+    understanding the complete textile manufacturing process.
+  </p>
 
-              <p>
-                The first is our own Treatfab brand, focused on developing and
-                manufacturing textile chemistry. The second is our trading and
-                distribution business, supplying chemicals from established
-                brands.
-              </p>
+  <p>
+    We develop and manufacture our own textile chemistry, with solutions
+    designed around the specific requirements of different stages of
+    textile processing.
+  </p>
 
-              <p>
-                Together, these two sides allow us to approach textile
-                processing from both a manufacturing and supply perspective —
-                helping customers find chemistry suited to the stage of their
-                process.
-              </p>
-            </div>
+  <p>
+    From preparation and dyeing to printing and finishing, our approach is to
+    provide dependable chemistry through one integrated manufacturing
+    partner — making textile chemical sourcing simpler for our customers.
+  </p>
+</div>
 
-            <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-[#0B1F3A]/10 bg-[#0B1F3A]/10 md:grid-cols-2">
+<div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-[#0B1F3A]/10 bg-[#0B1F3A]/10 md:grid-cols-2">
 
-              <div className="bg-white p-8 md:p-10">
-                <div className="mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-[#0B3D24] text-white">
-                  <Beaker size={20} />
-                </div>
+  <div className="bg-white p-8 md:p-10">
+    <div className="mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-[#0B3D24] text-white">
+      <Beaker size={20} />
+    </div>
 
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0B3D24]">
-                  Own brand
-                </p>
+    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#0B3D24]">
+      In-house manufacturing
+    </p>
 
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight">
-                  Treatfab Chemistry
-                </h3>
+    <h3 className="mt-3 text-2xl font-semibold tracking-tight">
+      Treatfab Chemistry
+    </h3>
 
-                <p className="mt-4 leading-7 text-[#0B1F3A]/60">
-                  Our own manufacturing vertical, developed around textile
-                  processing requirements and the principles of Ethical
-                  Chemistry.
-                </p>
-              </div>
+    <p className="mt-4 leading-7 text-[#0B1F3A]/60">
+      Our own manufactured range of textile chemistry, developed around
+      textile processing requirements and the principles of Ethical
+      Chemistry.
+    </p>
+  </div>
 
-              <div className="bg-[#0B1F3A] p-8 text-white md:p-10">
-                <div className="mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-[#E8B830] text-[#0B1F3A]">
-                  <Building2 size={20} />
-                </div>
+  <div className="bg-[#0B1F3A] p-8 text-white md:p-10">
+    <div className="mb-7 flex h-11 w-11 items-center justify-center rounded-full bg-[#E8B830] text-[#0B1F3A]">
+      <Building2 size={20} />
+    </div>
 
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E8B830]">
-                  Distribution
-                </p>
+    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#E8B830]">
+      One-stop solutions
+    </p>
 
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight">
-                  Established Brands
-                </h3>
+    <h3 className="mt-3 text-2xl font-semibold tracking-tight">
+      Across the Process
+    </h3>
 
-                <p className="mt-4 leading-7 text-white/60">
-                  A distribution business connecting textile manufacturers
-                  with established chemical brands and their product ranges.
-                </p>
-              </div>
+    <p className="mt-4 leading-7 text-white/60">
+      A process-focused approach covering key stages of textile production,
+      from preparation and dyeing to printing and finishing.
+    </p>
+  </div>
 
-            </div>
+</div>
           </motion.div>
         </div>
       </section>

@@ -95,8 +95,9 @@ const PROCESS_STAGES: ProcessStage[] = [
 const WHY_TREATFAB = [
   {
     index: "01",
-    title: "Two verticals. One contact.",
-    text: "Own manufacturing plus distribution means fewer vendors to manage for your purchase team.",
+    title: "One stop Solution for your every need.",
+    text: "From preparation to finishing, Treatfab provides textile chemistry designed to support the complete manufacturing process.",
+  
   },
   {
     index: "02",
@@ -213,10 +214,7 @@ export default function WhyTreatfabProcess() {
             <p
               className="max-w-[48ch] text-[1.05rem] leading-[1.75]"
               style={{ color: FOREST, opacity: 0.76 }}
-            >
-              From yarn preparation to the final garment, Treatfab stays close
-              to the process — combining its own manufactured range with
-              trusted distribution brands.
+            >From yarn preparation to the final garment, Treatfab stays close to the process — developing and manufacturing textile chemistry designed for every stage of fabric production.s.
             </p>
 
             <div className="mt-7 flex items-center gap-4">
@@ -503,9 +501,9 @@ export default function WhyTreatfabProcess() {
                 className="mt-4 border-t pt-6"
                 style={{ borderColor: "rgba(247,244,234,0.16)" }}
               >
-                <p className="text-[0.68rem] uppercase tracking-[0.16em] opacity-50">
-                  Own chemistry + trusted distribution
-                </p>
+              <p className="text-[0.68rem] uppercase tracking-[0.16em] opacity-50">
+  In-house chemistry. End-to-end solutions.
+</p>
               </div>
             </div>
           </motion.aside>

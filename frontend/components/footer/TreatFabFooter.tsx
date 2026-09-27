@@ -173,13 +173,13 @@ export default function Footer() {
   />
 </Link>
 
-            <p
-              className="mt-7 max-w-[310px] text-sm leading-6"
-              style={{ color: "rgba(247,245,238,0.55)" }}
-            >
-              Textile processing chemicals for mills and processing houses
-              across India — own manufacturing plus trusted distribution.
-            </p>
+<p
+  className="mt-7 max-w-[310px] text-sm leading-6"
+  style={{ color: "rgba(247,245,238,0.55)" }}
+>
+  Textile processing chemicals for mills and processing houses
+  across India — developed and manufactured by Treatfab.
+</p>
 
             <div className="mt-8 space-y-2 text-sm">
               <a

@@ -106,11 +106,11 @@ export default function ContactPage() {
                 <span className="text-[#E8B830]"> work.</span>
               </h1>
 
-              <p className="mt-9 max-w-2xl text-base leading-7 text-white/70 md:text-lg">
-                Tell us what you are working on. Whether you need Treatfab
-                chemistry, bulk distribution, or help with a textile process,
-                our team can start from your requirement.
-              </p>
+        <p className="mt-9 max-w-2xl text-base leading-7 text-white/70 md:text-lg">
+        Tell us what you are working on. From a specific textile process to a
+        broader chemistry requirement, our team starts with understanding your
+        needs.
+        </p>
             </motion.div>
 
             <motion.div

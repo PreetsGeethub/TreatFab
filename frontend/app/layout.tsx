@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Treatfab Chemicals",
   },
   description:
-    "Treatfab Chemicals develops and distributes textile process chemistry for pre-treatment, dyeing, printing, sizing and finishing.",
+   "Treatfab Chemicals develops and manufactures textile process chemistry for pre-treatment, dyeing, printing, sizing and finishing.",
   keywords: [
     "Treatfab Chemicals",
     "textile chemicals",

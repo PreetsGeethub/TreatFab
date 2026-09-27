@@ -36,7 +36,7 @@ const PRODUCTS: ProductRangeItem[] = [
     title: "Sizing & yarn dyeing chemicals",
     description:
       "Film-forming size agents that reduce warp breakage and improve weaving efficiency, plus package/hank dyeing auxiliaries.",
-    chips: ["Cotton", "Polyester", "P/C Blends", "Yarn Dyeing"],
+    chips: ["Cotton", "Polyester","Wool", "P/C Blends", "Yarn Dyeing"],
     kind: "yarn",
   },
   {
