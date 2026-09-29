@@ -30,7 +30,5 @@ export interface SolutionProcess {
   // taxonomy once supplied. Keep this list short; Products is intentionally
   // the simpler of the two dropdowns.
   export const productCategories: ProductCategory[] = [
-    { label: "Own Chemistry", slug: "treatfab" },
-    { label: "Distributed Brands", slug: "distribution" },
-    { label: "All Products", slug: "all" },
+    { label: "Own Chemistry", slug: "treatfab" },    { label: "All Products", slug: "all" },
   ];
