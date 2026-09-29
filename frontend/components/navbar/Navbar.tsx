@@ -202,13 +202,6 @@ export default function Navbar() {
             About
           </NavLink>
 
-          <NavLink
-            href="/brands"
-            textColor={textColor}
-            reversed={reversed}
-          >
-            Brands
-          </NavLink>
         </nav>
 
         {/* ---------------------------------------------------------- */}
@@ -407,13 +400,6 @@ export default function Navbar() {
               About
             </Link>
 
-            <Link
-              href="/brands"
-              className="text-base"
-              onClick={() => setMobileOpen(false)}
-            >
-              Brands
-            </Link>
           </div>
 
           <Link
