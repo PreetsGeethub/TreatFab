@@ -18,7 +18,7 @@ import {
 
 const enquiryTypes = [
   "Own Brand Enquiry",
-  "Bulk Distribution Enquiry",
+  "Bulk Chemical Enquiry",
   "Technical Requirement",
   "General Enquiry",
 ];
@@ -167,7 +167,7 @@ export default function ContactPage() {
               </h2>
               <p className="mt-5 max-w-md text-sm leading-6 text-[#0B1F3A]/60">
                 A clear requirement gives our team a better starting point.
-                Share the process, application, or distribution need you have
+                Share the process, application, or chemical requirement you have
                 in mind.
               </p>
             </div>
