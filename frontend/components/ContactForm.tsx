@@ -10,7 +10,7 @@ import {
 
 const enquiryTypes = [
   "Own Brand Enquiry",
-  "Bulk Distribution Enquiry",
+  "Bulk Chemical Enquiry",
   "Technical Requirement",
   "General Enquiry",
 ];
