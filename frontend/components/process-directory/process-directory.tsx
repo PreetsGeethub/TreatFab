@@ -26,40 +26,18 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion, type Variants } from "framer-motion";
+import { stages } from "@/data/stages";
 
 const FOREST = "#14251C";
 const GOLD = "#C6972F";
 const WARM_WHITE = "#FAF7F0";
 const SLIDE_DURATION_MS = 2800;
 
-interface ProcessStage {
-  number: string;
-  label: string;
-  examples: string;
-  slug: string;
-  image: string | null;
-}
-
-const PROCESS_STAGES: ProcessStage[] = [
-  { number: "01", label: "Fibre Dyeing", examples: "Dyeing auxiliaries, dispersing agents, levelling aids", slug: "fibre-dyeing", image: "/process/fibre-dyeing.jpeg" },
-  { number: "02", label: "Spinning", examples: "Spin finish oils, antistatic agents", slug: "spinning", image: "/process/spinning.jpeg" },
-  { number: "03", label: "Texturing", examples: "Texturising oils, lubricants", slug: "texturing", image: "/process/texturing.jpeg" },
-  { number: "04", label: "Yarn Dyeing", examples: "Package & hank dyeing auxiliaries", slug: "yarn-dyeing", image: "/process/yarn-dying.png" },
-  { number: "05", label: "Sizing", examples: "Warp sizing agents, film formers", slug: "sizing", image: "/process/sizing.jpeg" },
-  { number: "06", label: "Desizing & Scouring", examples: "Enzyme desizing, scouring agents", slug: "desizing-scouring", image: "/process/desizing-scouring.jpeg" },
-  { number: "07", label: "Bleaching & Mercerizing", examples: "Peroxide stabilisers, wetting agents", slug: "bleaching-mercerizing", image: "/process/bleaching-mercerizing.jpeg" },
-  { number: "08", label: "Piece / Fabric Dyeing", examples: "Levelling, dispersing, fixing agents", slug: "piece-fabric-dyeing", image: "/process/piece-fabric-dyeing.jpeg" },
-  { number: "09", label: "Printing", examples: "Pigment, reactive & disperse printing aids", slug: "printing", image: "/process/printing.jpeg" },
-  { number: "10", label: "Denim Processing", examples: "Indigo dyeing & finishing auxiliaries", slug: "denim-processing", image: "/process/denim-processing.jpeg" },
-  { number: "11", label: "Finishing", examples: "Softeners, easy-care & functional finishes", slug: "finishing", image: "/process/finishing.jpeg" },
-  { number: "12", label: "Garment Processing", examples: "Garment dyeing & washing auxiliaries", slug: "garment-processing", image: "/process/garment-processing.jpeg" },
-];
-
 export default function ProcessDirectory() {
   const reduceMotion = useReducedMotion();
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
-  const active = PROCESS_STAGES[index];
+  const active = stages[index];
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const block: Variants = {
@@ -72,13 +50,13 @@ export default function ProcessDirectory() {
   };
 
   const goTo = (i: number) =>
-    setIndex((i + PROCESS_STAGES.length) % PROCESS_STAGES.length);
+    setIndex((i + stages.length) % stages.length);
 
   useEffect(() => {
     if (reduceMotion || paused) return;
 
     timerRef.current = setInterval(() => {
-      setIndex((i) => (i + 1) % PROCESS_STAGES.length);
+      setIndex((i) => (i + 1) % stages.length);
     }, SLIDE_DURATION_MS);
 
     return () => {
@@ -235,7 +213,7 @@ export default function ProcessDirectory() {
               <AnimatePresence initial={false} mode="sync">
                 {active.image ? (
                   <motion.div
-                    key={active.slug}
+                    key={active.id}
                     className="absolute inset-0 will-change-transform"
                     initial={reduceMotion ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 1.035 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -247,7 +225,7 @@ export default function ProcessDirectory() {
                   >
                     <Image
                       src={active.image}
-                      alt={active.label}
+                      alt={active.title}
                       fill
                       priority={index === 0}
                       sizes="(max-width: 768px) 100vw, 1440px"
@@ -256,7 +234,7 @@ export default function ProcessDirectory() {
                   </motion.div>
                 ) : (
                   <motion.div
-                    key={active.slug}
+                    key={active.id}
                     className="absolute inset-0 will-change-transform"
                     initial={reduceMotion ? { opacity: 1 } : { opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -327,7 +305,7 @@ export default function ProcessDirectory() {
 
               {/* Caption remains inside the image, with controlled spacing */}
               <motion.div
-                key={`${active.slug}-caption`}
+                key={`${active.id}-caption`}
                 className="absolute bottom-0 left-0 z-10 flex max-w-[44ch] items-stretch gap-4 px-6 py-7 md:px-10 md:py-9"
                 initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -348,7 +326,7 @@ export default function ProcessDirectory() {
                       letterSpacing: "0.08em",
                     }}
                   >
-                    {active.number}
+                    {String(active.order).padStart(2, "0")}
                   </span>
 
                   <h3
@@ -358,14 +336,14 @@ export default function ProcessDirectory() {
                       textShadow: "0 2px 14px rgba(0,0,0,0.35)",
                     }}
                   >
-                    {active.label}
+                    {active.title}
                   </h3>
 
                   <p
                     className="mt-2 text-[0.95rem] leading-relaxed"
                     style={{ color: WARM_WHITE, opacity: 0.88 }}
                   >
-                    {active.examples}
+                    {active.description}
                   </p>
 
                   {!active.image && (
@@ -393,9 +371,9 @@ export default function ProcessDirectory() {
               role="tablist"
               aria-label="Process stages"
             >
-              {PROCESS_STAGES.map((stage, i) => (
+              {stages.map((stage, i) => (
                 <button
-                  key={stage.slug}
+                  key={stage.id}
                   type="button"
                   role="tab"
                   aria-selected={i === index}
@@ -408,7 +386,7 @@ export default function ProcessDirectory() {
                     fontVariantNumeric: "tabular-nums",
                   }}
                 >
-                  {stage.number}
+                  {String(stage.order).padStart(2, "0")}
                   {i === index && (
                     <span
                       className="absolute -bottom-1 left-1/2 h-px w-5 -translate-x-1/2"
@@ -460,7 +438,7 @@ export default function ProcessDirectory() {
           </div>
 
           <p className="sr-only" aria-live="polite">
-            {`Showing ${active.number} — ${active.label}`}
+            {`Showing ${String(active.order).padStart(2, "0")} — ${active.title}`}
           </p>
         </motion.div>
 
