@@ -29,6 +29,13 @@ const processLinks = [
   { label: "Contact", href: "#contact" },
 ];
 
+const legalLinks = [
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms of Use", href: "/terms-of-use" },
+  { label: "Cookie Policy", href: "/cookie-policy" },
+  { label: "Grievance Redressal", href: "/grievance-redressal" },
+];
+
 export default function Footer() {
   return (
     <footer
@@ -148,7 +155,7 @@ export default function Footer() {
         </div>
 
         {/* Navigation / contact */}
-        <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_1fr]">
           {/* Contact block */}
           <div>
           <Link
@@ -208,6 +215,7 @@ export default function Footer() {
           <FooterColumn title="Products" links={productLinks} />
           <FooterColumn title="Company" links={companyLinks} />
           <FooterColumn title="Explore" links={processLinks} />
+          <FooterColumn title="Legal" links={legalLinks} />
         </div>
 
         {/* Address / legal strip */}
