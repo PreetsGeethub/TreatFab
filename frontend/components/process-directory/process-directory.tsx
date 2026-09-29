@@ -404,7 +404,7 @@ export default function ProcessDirectory() {
             >
               {!reduceMotion && !paused && (
                 <motion.div
-                  key={active.slug}
+                  key={active.id}
                   className="h-full"
                   style={{ backgroundColor: GOLD }}
                   initial={{ width: "0%" }}
