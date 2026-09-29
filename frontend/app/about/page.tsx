@@ -50,7 +50,7 @@ const process = [
   {
     number: "02",
     title: "Formulate & source",
-    text: "Develop our own chemistry or connect the requirement with an appropriate established brand.",
+    text: "Develop and manufacture our own chemistry around the process requirement and application.",
   },
   {
     number: "03",
