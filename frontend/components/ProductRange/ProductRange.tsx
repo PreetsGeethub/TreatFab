@@ -3,6 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import type { CSSProperties } from "react";
 import Link from "next/link";
+import { stages, type ProcessCategory } from "@/data/stages";
 const FOREST = "#14251C";
 const FOREST_DEEP = "#0D2017";
 const GOLD = "#C6972F";
@@ -11,82 +12,53 @@ const CREAM = "#F7F4EC";
 const MOSS = "#526B58";
 const INK_SOFT = "#526058";
 
+type ProductRangeKind =
+  | "fibre"
+  | "yarn"
+  | "pretreat"
+  | "dye"
+  | "print"
+  | "denim"
+  | "finish";
+
 interface ProductRangeItem {
   number: string;
   eyebrow: string;
   title: string;
   description: string;
   chips: string[];
-  kind: "fibre" | "yarn" | "pretreat" | "dye" | "print" | "denim" | "finish";
+  kind: ProductRangeKind;
 }
 
-const PRODUCTS: ProductRangeItem[] = [
-  {
-    number: "01",
-    eyebrow: "Fibre & Spinning",
-    title: "Fibre dyeing, spin finish & texturing chemicals",
-    description:
-      "Dyeing auxiliaries for loose fibre, spin finish oils for smoother draw and less breakage, and texturising/antistatic agents for synthetic filament yarn.",
-    chips: ["Fibre Dyeing", "Spin Finish Oils", "Texturising Agents"],
-    kind: "fibre",
-  },
-  {
-    number: "02",
-    eyebrow: "Yarn Preparation",
-    title: "Sizing & yarn dyeing chemicals",
-    description:
-      "Film-forming size agents that reduce warp breakage and improve weaving efficiency, plus package/hank dyeing auxiliaries.",
-    chips: ["Cotton", "Polyester","Wool", "P/C Blends", "Yarn Dyeing"],
-    kind: "yarn",
-  },
-  {
-    number: "03",
-    eyebrow: "Fabric Pre-Treatment",
-    title: "Desizing, scouring, bleaching & mercerizing",
-    description:
-      "Enzyme desizing, scouring agents, peroxide stabilisers and mercerizing auxiliaries that prepare fabric for a clean, even dye uptake.",
-    chips: ["Low Foam", "Caustic Stable", "Enzyme Desizing"],
-    kind: "pretreat",
-  },
-  {
-    number: "04",
-    eyebrow: "Dyeing",
-    title: "Fabric & piece dyeing chemicals, and dyes",
-    description:
-      "Levelling, dispersing and fixing agents for shade consistency, alongside our range of dyes for cotton, polyester and blends.",
-    chips: ["Reactive", "Disperse", "Dyes"],
-    kind: "dye",
-  },
-  {
-    number: "05",
-    eyebrow: "Printing",
-    title: "Pigment, reactive & digital printing chemicals",
-    description:
-      "Binders, thickeners and fixing agents formulated for sharp, wash-fast prints across printing methods.",
-    chips: ["Pigment Printing", "Reactive Printing", "Digital Printing"],
-    kind: "print",
-  },
-  {
-    number: "06",
-    eyebrow: "Denim",
-    title: "Indigo dyeing & denim wash chemicals",
-    description:
-      "Reduction, oxidation, sizing and enzyme-wash auxiliaries built for high-turbulence rope and slasher dyeing lines.",
-    chips: ["Rope Dyeing", "Slasher Compatible", "Enzyme Wash"],
-    kind: "denim",
-  },
-  {
-    number: "07",
-    eyebrow: "Finishing & Garment",
-    title: "Finishing, garment processing & lubricants",
-    description:
-      "Softeners and functional finishes — easy-care, water-repellent, anti-microbial — plus garment dyeing, washing and bio-polishing chemicals.",
-    chips: ["Softeners", "Lubricants", "Garment Washing"],
-    kind: "finish",
-  },
-];
+function getProductKind(category: ProcessCategory): ProductRangeKind {
+  switch (category) {
+    case "FIBRE":
+      return "fibre";
+    case "YARN":
+    case "SIZING":
+      return "yarn";
+    case "PRE-TREAT":
+      return "pretreat";
+    case "DYEING":
+      return "dye";
+    case "PRINTING":
+      return "print";
+    case "DENIM":
+      return "denim";
+    case "FINISH":
+    case "GARMENT":
+      return "finish";
+  }
+}
 
-function ProcessIcon({ kind }: { kind: ProductRangeItem["kind"] }) {
+const PRODUCTS: ProductRangeItem[] = stages.map((stage) => ({
+  number: String(stage.order).padStart(2, "0"),
+  eyebrow: stage.shortLabel,
+  title: stage.title,
+  description: stage.description,
+  chips: stage.chips,
+  kind: getProductKind(stage.category),
+}));function ProcessIcon({ kind }: { kind: ProductRangeItem["kind"] }) {
   const common = {
     width: 54,
     height: 54,
@@ -315,7 +287,7 @@ export default function ProductRange() {
           </div>
 
           {/* Desktop stations */}
-          <div className="relative hidden grid-cols-7 gap-3 md:grid">
+          <div className="relative hidden grid-cols-6 gap-3 md:grid">
             {PRODUCTS.map((product, index) => (
               <motion.article
                 key={product.number}
