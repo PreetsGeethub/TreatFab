@@ -18,7 +18,6 @@ const productLinks = [
 
 const companyLinks = [
   { label: "About Treatfab", href: "#why" },
-  { label: "Our Brands", href: "#brands" },
   { label: "Quality", href: "#quality" },
   { label: "Sustainability", href: "#commitment" },
 ];
