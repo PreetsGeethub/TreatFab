@@ -214,7 +214,7 @@ export default function ContactPage() {
 
             <div className="mt-8 flex items-center gap-3">
               <Image
-                src="/images/treatfab-logo3.png"
+                src="/images/navbar.png"
                 alt="Treatfab"
                 width={190}
                 height={78}
