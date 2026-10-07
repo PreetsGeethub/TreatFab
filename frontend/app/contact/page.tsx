@@ -131,10 +131,10 @@ export default function ContactPage() {
                 </a>
 
                 <a
-                  href="mailto:treatfabchem@gmail.com"
+                  href="mailto:office@treatfab.com"
                   className="mt-2 block text-sm text-white/65 transition-colors hover:text-[#E8B830]"
                 >
-                  treatfabchem@gmail.com
+                  office@treatfab.com
                 </a>
 
                 <a
@@ -199,14 +199,14 @@ export default function ContactPage() {
               </a>
 
               <a
-                href="mailto:treatfabchem@gmail.com"
+                href="mailto:office@treatfab.com"
                 className="flex gap-4 border-b border-[#0B1F3A]/10 py-5 transition-colors hover:text-[#0B3D24]"
               >
                 <Mail className="mt-1 shrink-0" size={18} />
                 <div>
                   <p className="text-sm font-medium">Email</p>
                   <p className="mt-1 text-xs text-[#0B1F3A]/50">
-                    treatfabchem@gmail.com
+                    office@treatfab.com
                   </p>
                 </div>
               </a>
