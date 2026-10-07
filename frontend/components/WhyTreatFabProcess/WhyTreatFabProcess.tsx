@@ -45,7 +45,7 @@ const PROCESS_STAGES: ProcessStage[] = [
   {
     number: "05",
     title: "Sizing",
-    description: "Warp sizing chemistry for cotton,Wool and polyester and blended yarns.",
+    description: "Warp sizing chemistry for cotton, wool, polyester and blended yarns.",
     tag: "SIZING",
   },
   {
@@ -63,7 +63,7 @@ const PROCESS_STAGES: ProcessStage[] = [
   {
     number: "08",
     title: "Piece / Fabric Dyeing",
-    description: "Levelling, dispersing and fixing agents for fabric dyeing.",
+    description: "Levelling, dispersing, dye-fixing, washing off, reduction clearing agents for concerned substrates like cotton & polyester.",
     tag: "DYEING",
   },
   {
@@ -95,7 +95,7 @@ const PROCESS_STAGES: ProcessStage[] = [
 const WHY_TREATFAB = [
   {
     index: "01",
-    title: "One stop Solution for your every need.",
+    title: "One-stop solution for every need.",
     text: "From preparation to finishing, Treatfab provides textile chemistry designed to support the complete manufacturing process.",
   
   },
@@ -214,7 +214,7 @@ export default function WhyTreatfabProcess() {
             <p
               className="max-w-[48ch] text-[1.05rem] leading-[1.75]"
               style={{ color: FOREST, opacity: 0.76 }}
-            >From yarn preparation to the final garment, Treatfab stays close to the process — developing and manufacturing textile chemistry designed for every stage of fabric production.s.
+            >From yarn preparation to the final garment, Treatfab stays close to the process — developing and manufacturing textile chemistry designed for every stage of fabric production.
             </p>
 
             <div className="mt-7 flex items-center gap-4">
