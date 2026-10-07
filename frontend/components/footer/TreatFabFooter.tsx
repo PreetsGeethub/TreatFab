@@ -189,11 +189,11 @@ export default function Footer() {
 
             <div className="mt-8 space-y-2 text-sm">
               <a
-                href="mailto:treatfabchem@gmail.com"
+                href="mailto:office@treatfab.com"
                 className="block transition-colors hover:text-white"
                 style={{ color: "rgba(247,245,238,0.72)" }}
               >
-                treatfabchem@gmail.com
+                office@treatfab.com
               </a>
               <a
                 href="tel:+919829093188"
