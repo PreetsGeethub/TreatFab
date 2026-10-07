@@ -42,7 +42,7 @@ export default function TermsOfUsePage() {
       </LegalSection>
 
       <LegalSection number="2.8" title="Contact">
-        <p>treatfabchem@gmail.com · +91 9829093188 / 9116739555</p>
+        <p>office@treatfab.com · +91 9829093188 / 9116739555</p>
       </LegalSection>
     </LegalPageShell>
   );
