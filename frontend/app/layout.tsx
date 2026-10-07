@@ -79,7 +79,7 @@ const organizationSchema = {
     "@type": "ContactPoint",
     telephone: "+91-9829093188",
     contactType: "sales",
-    email: "treatfabchem@gmail.com",
+    email: "office@treatfab.com",
   },
 };
 
