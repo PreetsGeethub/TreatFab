@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
           "Request deletion of your data, subject to legal record-keeping requirements.",
           "Withdraw consent for future communication.",
         ]} />
-        <p>To exercise these rights, contact us at treatfabchem@gmail.com or the Grievance Contact listed below.</p>
+        <p>To exercise these rights, contact us at office@treatfab.com or the Grievance Contact listed below.</p>
       </LegalSection>
 
       <LegalSection number="1.6" title="Cookies">
@@ -63,12 +63,8 @@ export default function PrivacyPolicyPage() {
       </LegalSection>
 
       <LegalSection number="1.9" title="Contact">
-        <p>Questions about this policy: treatfabchem@gmail.com · +91 9829093188</p>
+        <p>Questions about this policy: office@treatfab.com · +91 9829093188</p>
       </LegalSection>
-
-      <div className="border border-[#C6972F]/30 bg-[#C6972F]/[0.07] p-5 text-sm leading-6 text-[#0B1F3A]/65">
-        This privacy policy is based on Treatfab's current legal-page draft and should be reviewed by a lawyer or CA before launch, particularly if analytics, cookies, newsletters, or other data-processing features are added.
-      </div>
     </LegalPageShell>
   );
 }
