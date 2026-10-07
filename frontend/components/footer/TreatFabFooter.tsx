@@ -164,7 +164,7 @@ export default function Footer() {
   aria-label="Treatfab home"
 >
   <Image
-    src="/images/treatfab-logo3.png"
+    src="/images/navbar.png"
     alt="Treatfab"
     width={220}
     height={90}
