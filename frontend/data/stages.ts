@@ -105,7 +105,7 @@ export const stages: ProcessStage[] = [
     title: "Piece / Fabric Dyeing",
     shortLabel: "Piece / Fabric Dyeing",
     description:
-      "Levelling, dispersing and fixing agents for shade consistency, alongside our range of dyes for cotton, wool, polyester and blends.",
+      "Levelling, dispersing, dye-fixing, washing off, reduction clearing agents for concerned substrates like cotton & polyester.",
     chips: ["Reactive", "Disperse", "Wool Dyeing", "Dyes"],
     image: "/process/piece-fabric-dyeing.jpeg",
   },
